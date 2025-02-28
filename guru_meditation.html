@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guru Meditation Adventure</title>
+    <style>
+        @font-face {
+            font-family: 'AmigaFont';
+            src: url('data:application/font-woff2;base64,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') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            user-select: none;
+        }
+
+        body {
+            font-family: 'AmigaFont', monospace;
+            background-color: #000;
+            color: #fff;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        #game-container {
+            position: relative;
+            width: 640px;
+            height: 480px;
+            background-color: #000;
+            overflow: hidden;
+            border: 2px solid #666;
+        }
+
+        /* Guru Meditation Screen */
+        #guru-screen {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: #a00;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 10;
+        }
+
+        #guru-text {
+            color: #000;
+            font-size: 20px;
+            text-align: center;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        #guru-code {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+
+        /* Game Screen */
+        #game-screen {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: none;
+            background-color: #000;
+            overflow: hidden;
+        }
+
+        #maze {
+            position: relative;
+            width: 2000px;
+            height: 2000px;
+            background-color: #111;
+        }
+
+        .wall {
+            position: absolute;
+            background-color: #4477aa;
+            border: 1px solid #6699cc;
+        }
+
+        .memory-fragment {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #ffcc00;
+            border-radius: 50%;
+            animation: pulse 1.5s infinite alternate;
+        }
+
+        .bug {
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            background-color: #ff3333;
+            clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+            animation: rotate 4s linear infinite;
+        }
+
+        #player {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background-color: #00ff00;
+            border-radius: 4px;
+            z-index: 5;
+            transition: all 0.1s ease;
+        }
+
+        #status-bar {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 40px;
+            background-color: #222;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            z-index: 10;
+        }
+
+        #fragments-count {
+            color: #ffcc00;
+        }
+
+        #health-bar {
+            display: flex;
+        }
+
+        .health-unit {
+            width: 15px;
+            height: 15px;
+            background-color: #00ff00;
+            margin-right: 5px;
+        }
+
+        /* Screens */
+        #intro-screen, #win-screen, #lose-screen {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 20;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .screen-title {
+            font-size: 28px;
+            color: #ffcc00;
+            margin-bottom: 20px;
+        }
+
+        .screen-text {
+            font-size: 18px;
+            color: #fff;
+            margin-bottom: 30px;
+            line-height: 1.5;
+            max-width: 80%;
+        }
+
+        .button {
+            padding: 10px 20px;
+            background-color: #4477aa;
+            color: #fff;
+            border: none;
+            font-family: 'AmigaFont', monospace;
+            font-size: 18px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .button:hover {
+            background-color: #5588bb;
+        }
+
+        /* Terminal */
+        #terminal {
+            position: absolute;
+            width: 100%;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #000;
+            padding: 20px;
+            font-family: monospace;
+            font-size: 18px;
+            color: #0f0;
+            display: none;
+            line-height: 1.5;
+            z-index: 15;
+        }
+
+        #cursor {
+            display: inline-block;
+            width: 10px;
+            height: 20px;
+            background-color: #0f0;
+            animation: blink 1s step-end infinite;
+        }
+
+        /* Animations */
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 0 5px #ffcc00; }
+            100% { transform: scale(1.2); box-shadow: 0 0 15px #ffcc00; }
+        }
+
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Transitions */
+        .flicker {
+            animation: flicker 0.5s linear infinite alternate;
+        }
+
+        @keyframes flicker {
+            0% { opacity: 0.7; }
+            100% { opacity: 1; }
+        }
+
+        #scanlines {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(
+                to bottom,
+                rgba(0, 0, 0, 0.15),
+                rgba(0, 0, 0, 0.15) 1px,
+                transparent 1px,
+                transparent 2px
+            );
+            pointer-events: none;
+            z-index: 25;
+        }
+    </style>
+</head>
+<body>
+    <div id="game-container">
+        <!-- Guru Meditation Screen -->
+        <div id="guru-screen">
+            <div id="guru-text">
+                Software Failure. Press left mouse button to continue.<br>
+                <span id="guru-code">Guru Meditation #00000003.48454C50</span>
+            </div>
+        </div>
+
+        <!-- Game Screen -->
+        <div id="game-screen">
+            <div id="maze">
+                <!-- Walls, fragments, bugs will be added here dynamically -->
+                <div id="player"></div>
+            </div>
+            <div id="status-bar">
+                <div id="fragments-count">Memory Fragments: 0/10</div>
+                <div id="health-bar">
+                    <div class="health-unit"></div>
+                    <div class="health-unit"></div>
+                    <div class="health-unit"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Terminal -->
+        <div id="terminal">
+            <div id="terminal-text"></div>
+            <div id="cursor"></div>
+        </div>
+
+        <!-- Intro Screen -->
+        <div id="intro-screen">
+            <h2 class="screen-title">SYSTEM BREACH</h2>
+            <p class="screen-text">
+                You've hacked through the Guru Meditation error and entered the system core. 
+                The Amiga OS is corrupted and you need to collect 10 memory fragments to repair it.
+                Avoid the bugs that are corrupting the system!
+            </p>
+            <p class="screen-text">
+                Use ARROW KEYS to move.
+                You have 3 system protection units. Each bug collision will damage one unit.
+            </p>
+            <button class="button" id="start-button">START REPAIR</button>
+        </div>
+        
+        <!-- Win Screen -->
+        <div id="win-screen">
+            <h2 class="screen-title">SYSTEM RESTORED</h2>
+            <p class="screen-text">
+                Congratulations! You've collected all memory fragments and restored the Amiga OS.
+                The system is now stable and the Guru has been appeased.
+            </p>
+            <button class="button" id="restart-button-win">RESTART</button>
+        </div>
+        
+        <!-- Lose Screen -->
+        <div id="lose-screen">
+            <h2 class="screen-title">SYSTEM FAILURE</h2>
+            <p class="screen-text">
+                Your system protection units have been depleted.
+                The bugs have corrupted the core system and the Amiga OS is beyond repair.
+            </p>
+            <button class="button" id="restart-button-lose">TRY AGAIN</button>
+        </div>
+
+        <!-- Scanlines Overlay -->
+        <div id="scanlines"></div>
+    </div>
+
+    <script>
+        // Game state
+        const gameState = {
+            started: false,
+            fragmentsCollected: 0,
+            totalFragments: 10,
+            health: 3,
+            playerPos: { x: 320, y: 240 },
+            playerSize: { width: 30, height: 30 },
+            mazeSize: { width: 2000, height: 2000 },
+            viewportSize: { width: 640, height: 440 }, // 440 to account for status bar
+            walls: [],
+            fragments: [],
+            bugs: [],
+            keys: {
+                up: false,
+                down: false,
+                left: false,
+                right: false
+            },
+            terminalPhase: 0
+        };
+
+        // DOM Elements
+        const guruScreen = document.getElementById('guru-screen');
+        const gameScreen = document.getElementById('game-screen');
+        const terminal = document.getElementById('terminal');
+        const terminalText = document.getElementById('terminal-text');
+        const introScreen = document.getElementById('intro-screen');
+        const winScreen = document.getElementById('win-screen');
+        const loseScreen = document.getElementById('lose-screen');
+        const startButton = document.getElementById('start-button');
+        const restartButtonWin = document.getElementById('restart-button-win');
+        const restartButtonLose = document.getElementById('restart-button-lose');
+        const player = document.getElementById('player');
+        const maze = document.getElementById('maze');
+        const fragmentsCount = document.getElementById('fragments-count');
+        const healthBar = document.getElementById('health-bar');
+
+        // Game sounds
+        const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+
+        function playSound(frequency, duration, type = 'square') {
+            const oscillator = audioContext.createOscillator();
+            const gainNode = audioContext.createGain();
+            
+            oscillator.type = type;
+            oscillator.frequency.value = frequency;
+            
+            gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
+            gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + duration);
+            
+            oscillator.connect(gainNode);
+            gainNode.connect(audioContext.destination);
+            
+            oscillator.start();
+            oscillator.stop(audioContext.currentTime + duration);
+        }
+
+        function playCollectSound() {
+            playSound(880, 0.1, 'sine');
+            setTimeout(() => playSound(1320, 0.1, 'sine'), 100);
+        }
+
+        function playHitSound() {
+            playSound(220, 0.3, 'sawtooth');
+        }
+
+        function playWinSound() {
+            playSound(440, 0.1, 'sine');
+            setTimeout(() => playSound(550, 0.1, 'sine'), 150);
+            setTimeout(() => playSound(660, 0.1, 'sine'), 300);
+            setTimeout(() => playSound(880, 0.2, 'sine'), 450);
+        }
+
+        function playLoseSound() {
+            playSound(220, 0.2, 'sawtooth');
+            setTimeout(() => playSound(196, 0.2, 'sawtooth'), 200);
+            setTimeout(() => playSound(175, 0.3, 'sawtooth'), 400);
+        }
+
+        // Terminal text typing
+        function typeText(text, callback) {
+            let i = 0;
+            terminal.style.display = 'block';
+            terminalText.textContent = '';
+            
+            function type() {
+                if (i < text.length) {
+                    terminalText.textContent += text.charAt(i);
+                    i++;
+                    setTimeout(type, 30);
+                } else {
+                    setTimeout(() => {
+                        if (callback) callback();
+                    }, 1000);
+                }
+            }
+            
+            type();
+        }
+
+        // Initialize game
+        function initGame() {
+            // Reset game state
+            gameState.fragmentsCollected = 0;
+            gameState.health = 3;
+            gameState.playerPos = { x: 320, y: 240 };
+            gameState.walls = [];
+            gameState.fragments = [];
+            gameState.bugs = [];
+            
+            // Update UI
+            updateFragmentsUI();
+            updateHealthUI();
+            
+            // Position player
+            updatePlayerPosition();
+            
+            // Generate maze
+            generateMaze();
+            
+            // Place fragments
+            placeFragments();
+            
+            // Place bugs
+            placeBugs();
+            
+            // Start game loop
+            if (!gameState.started) {
+                gameState.started = true;
+                gameLoop();
+            }
+        }
+
+        // Generate maze walls
+        function generateMaze() {
+            // Clear existing walls
+            gameState.walls.forEach(wall => {
+                if (wall.element) wall.element.remove();
+            });
+            gameState.walls = [];
+            
+            // Create border walls
+            createWall(0, 0, gameState.mazeSize.width, 20);
+            createWall(0, 0, 20, gameState.mazeSize.height);
+            createWall(0, gameState.mazeSize.height - 20, gameState.mazeSize.width, 20);
+            createWall(gameState.mazeSize.width - 20, 0, 20, gameState.mazeSize.height);
+            
+            // Create maze walls
+            for (let i = 0; i < 30; i++) {
+                const horizontal = Math.random() > 0.5;
+                const length = 100 + Math.random() * 300;
+                const thickness = 20;
+                
+                let x, y, width, height;
+                
+                if (horizontal) {
+                    width = length;
+                    height = thickness;
+                    x = Math.random() * (gameState.mazeSize.width - width);
+                    y = Math.random() * (gameState.mazeSize.height - height);
+                } else {
+                    width = thickness;
+                    height = length;
+                    x = Math.random() * (gameState.mazeSize.width - width);
+                    y = Math.random() * (gameState.mazeSize.height - height);
+                }
+                
+                // Ensure the player spawn area is clear
+                const playerSpawnRect = {
+                    x: 220, y: 140, 
+                    width: 200, height: 200
+                };
+                
+                if (!isRectIntersecting(
+                    {x, y, width, height},
+                    playerSpawnRect
+                )) {
+                    createWall(x, y, width, height);
+                }
+            }
+        }
+
+        // Create a wall
+        function createWall(x, y, width, height) {
+            const wall = document.createElement('div');
+            wall.className = 'wall';
+            wall.style.left = `${x}px`;
+            wall.style.top = `${y}px`;
+            wall.style.width = `${width}px`;
+            wall.style.height = `${height}px`;
+            
+            maze.appendChild(wall);
+            
+            gameState.walls.push({
+                x, y, width, height,
+                element: wall
+            });
+        }
+
+        // Place memory fragments
+        function placeFragments() {
+            // Clear existing fragments
+            gameState.fragments.forEach(fragment => {
+                if (fragment.element) fragment.element.remove();
+            });
+            gameState.fragments = [];
+            
+            for (let i = 0; i < gameState.totalFragments; i++) {
+                let x, y, validPosition = false;
+                
+                while (!validPosition) {
+                    x = 40 + Math.random() * (gameState.mazeSize.width - 80);
+                    y = 40 + Math.random() * (gameState.mazeSize.height - 80);
+                    
+                    // Check if not colliding with walls
+                    validPosition = !gameState.walls.some(wall => 
+                        isRectIntersecting(
+                            {x, y, width: 20, height: 20},
+                            wall
+                        )
+                    );
+                    
+                    // Check if not too close to player spawn
+                    const distToPlayer = Math.sqrt(
+                        Math.pow(x - gameState.playerPos.x, 2) + 
+                        Math.pow(y - gameState.playerPos.y, 2)
+                    );
+                    
+                    if (distToPlayer < 150) {
+                        validPosition = false;
+                    }
+                    
+                    // Check if not too close to other fragments
+                    for (const fragment of gameState.fragments) {
+                        const distToFragment = Math.sqrt(
+                            Math.pow(x - fragment.x, 2) + 
+                            Math.pow(y - fragment.y, 2)
+                        );
+                        
+                        if (distToFragment < 100) {
+                            validPosition = false;
+                            break;
+                        }
+                    }
+                }
+                
+                createFragment(x, y);
+            }
+        }
+
+        // Create a memory fragment
+        function createFragment(x, y) {
+            const fragment = document.createElement('div');
+            fragment.className = 'memory-fragment';
+            fragment.style.left = `${x}px`;
+            fragment.style.top = `${y}px`;
+            
+            maze.appendChild(fragment);
+            
+            gameState.fragments.push({
+                x, y, width: 20, height: 20,
+                collected: false,
+                element: fragment
+            });
+        }
+
+        // Place bugs
+        function placeBugs() {
+            // Clear existing bugs
+            gameState.bugs.forEach(bug => {
+                if (bug.element) bug.element.remove();
+            });
+            gameState.bugs = [];
+            
+            for (let i = 0; i < 8; i++) {
+                let x, y, validPosition = false;
+                
+                while (!validPosition) {
+                    x = 40 + Math.random() * (gameState.mazeSize.width - 80);
+                    y = 40 + Math.random() * (gameState.mazeSize.height - 80);
+                    
+                    // Check if not colliding with walls
+                    validPosition = !gameState.walls.some(wall => 
+                        isRectIntersecting(
+                            {x, y, width: 24, height: 24},
+                            wall
+                        )
+                    );
+                    
+                    // Check if not too close to player spawn
+                    const distToPlayer = Math.sqrt(
+                        Math.pow(x - gameState.playerPos.x, 2) + 
+                        Math.pow(y - gameState.playerPos.y, 2)
+                    );
+                    
+                    if (distToPlayer < 200) {
+                        validPosition = false;
+                    }
+                }
+                
+                createBug(x, y);
+            }
+        }
+
+        // Create a bug
+        function createBug(x, y) {
+            const bug = document.createElement('div');
+            bug.className = 'bug';
+            bug.style.left = `${x}px`;
+            bug.style.top = `${y}px`;
+            
+            maze.appendChild(bug);
+            
+            gameState.bugs.push({
+                x, y, width: 24, height: 24,
+                speedX: (Math.random() - 0.5) * 3,
+                speedY: (Math.random() - 0.5) * 3,
+                element: bug
+            });
+        }
+
+        // Update player position based on keys and check collisions
+        function updatePlayerMovement() {
+            let dx = 0, dy = 0;
+            const speed = 5;
+            
+            if (gameState.keys.up) dy -= speed;
+            if (gameState.keys.down) dy += speed;
+            if (gameState.keys.left) dx -= speed;
+            if (gameState.keys.right) dx += speed;
+            
+            // Normalize diagonal movement
+            if (dx !== 0 && dy !== 0) {
+                const factor = 1 / Math.sqrt(2);
+                dx *= factor;
+                dy *= factor;
+            }
+            
+            // Update position
+            let newX = gameState.playerPos.x + dx;
+            let newY = gameState.playerPos.y + dy;
+            
+            // Check wall collisions
+            const playerRect = {
+                x: newX, 
+                y: newY, 
+                width: gameState.playerSize.width, 
+                height: gameState.playerSize.height
+            };
+            
+            let wallCollision = false;
+            
+            for (const wall of gameState.walls) {
+                if (isRectIntersecting(playerRect, wall)) {
+                    wallCollision = true;
+                    break;
+                }
+            }
+            
+            if (!wallCollision) {
+                // Keep player within bounds
+                newX = Math.max(20, Math.min(gameState.mazeSize.width - gameState.playerSize.width - 20, newX));
+                newY = Math.max(20, Math.min(gameState.mazeSize.height - gameState.playerSize.height - 20, newY));
+                
+                gameState.playerPos.x = newX;
+                gameState.playerPos.y = newY;
+                
+                updatePlayerPosition();
+            }
+            
+            // Check fragment collisions
+            for (const fragment of gameState.fragments) {
+                if (!fragment.collected && isRectIntersecting(playerRect, fragment)) {
+                    collectFragment(fragment);
+                }
+            }
+            
+            // Check bug collisions
+            for (const bug of gameState.bugs) {
+                if (isRectIntersecting(playerRect, bug)) {
+                    playerHit();
+                    
+                    // Push player away from bug
+                    const pushDx = gameState.playerPos.x - bug.x;
+                    const pushDy = gameState.playerPos.y - bug.y;
+                    const pushDist = Math.sqrt(pushDx * pushDx + pushDy * pushDy);
+                    
+                    if (pushDist > 0) {
+                        gameState.playerPos.x += (pushDx / pushDist) * 30;
+                        gameState.playerPos.y += (pushDy / pushDist) * 30;
+                        
+                        // Keep player within bounds
+                        gameState.playerPos.x = Math.max(20, Math.min(gameState.mazeSize.width - gameState.playerSize.width - 20, gameState.playerPos.x));
+                        gameState.playerPos.y = Math.max(20, Math.min(gameState.mazeSize.height - gameState.playerSize.height - 20, gameState.playerPos.y));
+                        
+                        updatePlayerPosition();
+                    }
+                }
+            }
+        }
+
+        // Update bugs movement
+        function updateBugs() {
+            for (const bug of gameState.bugs) {
+                bug.x += bug.speedX;
+                bug.y += bug.speedY;
+                
+                // Wall collision
+                let collided = false;
+                
+                // Boundary collision
+                if (bug.x < 20 || bug.x > gameState.mazeSize.width - bug.width - 20) {
+                    bug.speedX *= -1;
+                    collided = true;
+                }
+                
+                if (bug.y < 20 || bug.y > gameState.mazeSize.height - bug.height - 20) {
+                    bug.speedY *= -1;
+                    collided = true;
+                }
+                
+                // Wall collision
+                if (!collided) {
+                    for (const wall of gameState.walls) {
+                        if (isRectIntersecting(bug, wall)) {
+                            // Determine which side was hit
+                            const overlapLeft = bug.x + bug.width - wall.x;
+                            const overlapRight = wall.x + wall.width - bug.x;
+                            const overlapTop = bug.y + bug.height - wall.y;
+                            const overlapBottom = wall.y + wall.height - bug.y;
+                            
+                            // Find smallest overlap
+                            const minOverlap = Math.min(overlapLeft, overlapRight, overlapTop, overlapBottom);
+                            
+                            if (minOverlap === overlapLeft || minOverlap === overlapRight) {
+                                bug.speedX *= -1;
+                            } else {
+                                bug.speedY *= -1;
+                            }
+                            
+                            break;
+                        }
+                    }
+                }
+                
+                // Home in on player occasionally
+                if (Math.random() < 0.005) {
+                    const dx = gameState.playerPos.x - bug.x;
+                    const dy = gameState.playerPos.y - bug.y;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+                    
+                    if (dist < 300) {
+                        bug.speedX = (dx / dist) * (1 + Math.random());
+                        bug.speedY = (dy / dist) * (1 + Math.random());
+                    }
+                }
+                
+                // Update position
+                bug.element.style.left = `${bug.x}px`;
+                bug.element.style.top = `${bug.y}px`;
+            }
+        }
+
+        // Collect a fragment
+        function collectFragment(fragment) {
+            fragment.collected = true;
+            fragment.element.style.display = 'none';
+            
+            gameState.fragmentsCollected++;
+            updateFragmentsUI();
+            playCollectSound();
+            
+            if (gameState.fragmentsCollected >= gameState.totalFragments) {
+                setTimeout(showWinScreen, 500);
+            }
+        }
+
+        // Player hit by bug
+        function playerHit() {
+            if (gameState.health > 0) {
+                gameState.health--;
+                updateHealthUI();
+                playHitSound();
+                
+                // Visual feedback
+                player.style.backgroundColor = '#ff3333';
+                setTimeout(() => {
+                    player.style.backgroundColor = '#00ff00';
+                }, 200);
+                
+                if (gameState.health <= 0) {
+                    setTimeout(showLoseScreen, 500);
+                }
+            }
+        }
+
+        // Update player position on screen
+        function updatePlayerPosition() {
+            player.style.left = `${gameState.playerPos.x}px`;
+            player.style.top = `${gameState.playerPos.y}px`;
+            
+            // Center the viewport on the player
+            const viewportLeft = gameState.playerPos.x - gameState.viewportSize.width / 2;
+            const viewportTop = gameState.playerPos.y - gameState.viewportSize.height / 2;
+            
+            // Clamp viewport to maze bounds
+            const maxViewportLeft = gameState.mazeSize.width - gameState.viewportSize.width;
+            const maxViewportTop = gameState.mazeSize.height - gameState.viewportSize.height;
+            
+            const clampedLeft = Math.max(0, Math.min(maxViewportLeft, viewportLeft));
+            const clampedTop = Math.max(0, Math.min(maxViewportTop, viewportTop));
+            
+            maze.style.transform = `translate(${-clampedLeft}px, ${-clampedTop}px)`;
+        }
+
+        // Update the fragments UI
+        function updateFragmentsUI() {
+            fragmentsCount.textContent = `Memory Fragments: ${gameState.fragmentsCollected}/${gameState.totalFragments}`;
+        }
+
+        // Update the health UI
+        function updateHealthUI() {
+            // Remove all health units
+            while (healthBar.firstChild) {
+                healthBar.removeChild(healthBar.firstChild);
+            }
+            
+            // Add health units
+            for (let i = 0; i < gameState.health; i++) {
+                const healthUnit = document.createElement('div');
+                healthUnit.className = 'health-unit';
+                healthBar.appendChild(healthUnit);
+            }
+        }
+
+        // Collision detection
+        function isRectIntersecting(rectA, rectB) {
+            return (
+                rectA.x < rectB.x + rectB.width &&
+                rectA.x + rectA.width > rectB.x &&
+                rectA.y < rectB.y + rectB.height &&
+                rectA.y + rectA.height > rectB.y
+            );
+        }
+
+        // Game loop
+        function gameLoop() {
+            if (gameState.started) {
+                updatePlayerMovement();
+                updateBugs();
+                requestAnimationFrame(gameLoop);
+            }
+        }
+
+        // Show intro screen
+        function showIntroScreen() {
+            terminal.style.display = 'none';
+            introScreen.style.display = 'flex';
+        }
+
+        // Show win screen
+        function showWinScreen() {
+            gameState.started = false;
+            winScreen.style.display = 'flex';
+            playWinSound();
+        }
+
+        // Show lose screen
+        function showLoseScreen() {
+            gameState.started = false;
+            loseScreen.style.display = 'flex';
+            playLoseSound();
+        }
+
+        // Event listeners
+        guruScreen.addEventListener('click', () => {
+            guruScreen.style.display = 'none';
+            
+            // Start terminal sequence
+            processTerminalPhase();
+        });
+
+        startButton.addEventListener('click', () => {
+            introScreen.style.display = 'none';
+            initGame();
+        });
+
+        restartButtonWin.addEventListener('click', () => {
+            winScreen.style.display = 'none';
+            initGame();
+        });
+
+        restartButtonLose.addEventListener('click', () => {
+            loseScreen.style.display = 'none';
+            initGame();
+        });
+
+        // Keyboard controls
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowUp') gameState.keys.up = true;
+            if (e.key === 'ArrowDown') gameState.keys.down = true;
+            if (e.key === 'ArrowLeft') gameState.keys.left = true;
+            if (e.key === 'ArrowRight') gameState.keys.right = true;
+        });
+
+        document.addEventListener('keyup', (e) => {
+            if (e.key === 'ArrowUp') gameState.keys.up = false;
+            if (e.key === 'ArrowDown') gameState.keys.down = false;
+            if (e.key === 'ArrowLeft') gameState.keys.left = false;
+            if (e.key === 'ArrowRight') gameState.keys.right = false;
+        });
+
+        // Terminal phases
+        function processTerminalPhase() {
+            switch (gameState.terminalPhase) {
+                case 0:
+                    typeText('> AMIGA OS DIAGNOSTIC RUNNING...', () => {
+                        gameState.terminalPhase++;
+                        processTerminalPhase();
+                    });
+                    break;
+                case 1:
+                    typeText('> CRITICAL ERROR DETECTED\n> SYSTEM MEMORY CORRUPTION FOUND\n> ATTEMPTING RECOVERY...', () => {
+                        gameState.terminalPhase++;
+                        processTerminalPhase();
+                    });
+                    break;
+                case 2:
+                    typeText('> MANUAL OVERRIDE REQUIRED\n> ENTERING SYSTEM CORE\n> PREPARE FOR EMERGENCY REPAIR PROTOCOL', () => {
+                        gameState.terminalPhase++;
+                        processTerminalPhase();
+                    });
+                    break;
+                case 3:
+                    terminal.style.display = 'none';
+                    gameScreen.style.display = 'block';
+                    showIntroScreen();
+                    break;
+            }
+        }
+
+        // Decode hexadecimal Guru Meditation code
+        function decodeGuruCode() {
+            const guruCode = document.getElementById('guru-code');
+            let code = guruCode.textContent;
+            
+            // Flash the code
+            let flashing = setInterval(() => {
+                guruCode.style.visibility = guruCode.style.visibility === 'hidden' ? 'visible' : 'hidden';
+            }, 500);
+            
+            setTimeout(() => {
+                clearInterval(flashing);
+                guruCode.style.visibility = 'visible';
+                
+                // Change to blinking text
+                guruCode.textContent = "CLICK TO INITIALIZE EMERGENCY PROTOCOL";
+                guruCode.classList.add('flicker');
+            }, 3000);
+        }
+
+        // Initialize
+        window.onload = function() {
+            decodeGuruCode();
+        };
+    </script>
+</body>
+</html>
